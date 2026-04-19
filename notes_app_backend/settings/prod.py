@@ -3,7 +3,10 @@ from .common import *
 
 DEBUG = False
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ.get('SECRET_KEY')
+if not SECRET_KEY:
+    raise Exception("SECRET_KEY not set")
+
 
 ALLOWED_HOSTS = ['34.101.121.196']
 
@@ -14,3 +17,5 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
