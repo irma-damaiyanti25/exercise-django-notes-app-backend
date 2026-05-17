@@ -32,7 +32,7 @@ RESTful Notes API built with Django and Django REST Framework, deployed on Googl
 ##  Live API
 
 ```bash
-http://34.101.121.196/notes/
+http://34.50.124.217/notes/
 ```
 
 ---
